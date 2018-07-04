@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1545 stream graphics</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+  </head>
+
+  <body>
+    <div class="stream-container">
+      <canvas id="grid_bg"></canvas>
+      <svg id="grid_svg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="var(--border-gray)" stroke-width="1" />
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#smallGrid)" />
+      </svg>
+
+
+      <div class="top-bar">
+        <div class="nameplate" id="main_nameplate" style="--color: var(--green)">
+          <img class="nameplate__avatar">
+          <div class="nameplate-text">
+            <span class="nameplate__name"></span>
+            <div class="nameplate-info">
+              <span class="nameplate-info__cell"><span class="nameplate__team"></span></span>
+              <span class="nameplate-info__cell nameplate__social">
+                <span class="fab fa-twitch"></span>
+                <span class="nameplate__twitch__text"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeplate">
+          <div class="timeplate-timer">00:50:16</div>
+        </div>
+
+        <div class="gameplate" id="main_gameplate">
+          <div class="gameplate-info">
+            <span class="gameplate-info__cell gameplate__category">117%</span>
+            <span class="gameplate-info__cell gameplate__estimate">EST: 3:45:00</span>
+          </div>
+          <span class="gameplate-game gameplate__name">Spyro 3</span>
+        </div>
+      </div>
+
+
+      <div class="side-bar" style="--color: var(--purple)">
+        <div class="team-info">
+          <div class="team-info__name">Team Washi Washi</div>
+        </div>
+      </div>
+
+
+      <div class="stream-placeholder">
+      </div>
+
+
+      <div class="bottom-bar">
+        <div class="bottom-bar__brand">
+          The 1545
+        </div>
+
+        <div class="bottom-bar__teamboxes">
+          <div class="teambox initial" style="--color: var(--blue)">
+            <span class="teambox__team-name">Puttin' in the Work</span>
+            <span class="teambox__game">
+              <span class="teambox__game-name">Kazooie</span>
+              <span class="teambox__game-time">02:01:12</span>
+            </span>
+          </div>
+
+          <div class="teambox initial" style="--color: var(--purple)">
+            <span class="teambox__team-name">Team Washi Washi</span>
+            <span class="teambox__game">
+              <span class="teambox__game-name">Spyro 3</span>
+              <span class="teambox__game-time">00:37:16</span>
+            </span>
+          </div>
+
+          <div class="teambox initial" style="--color: var(--gray)">
+            <span class="teambox__team-name">Team Popoff</span>
+            <span class="teambox__game">
+              <span class="teambox__game-name">Galaxy 2</span>
+              <span class="teambox__game-time">07:21:11</span>
+            </span>
+          </div>
+
+          <div class="teambox initial" style="--color: var(--yellow)">
+            <span class="teambox__team-name">You're Too Slow</span>
+            <span class="teambox__game">
+              <span class="teambox__game-name">DK64</span>
+              <span class="teambox__game-time">03:52:29</span>
+            </span>
+          </div>
+
+          <div class="teambox initial" style="--color: var(--pink)">
+            <span class="teambox__team-name">Pinky Coinkydinks</span>
+            <span class="teambox__game">
+              <span class="teambox__game-name">SM64</span>
+              <span class="teambox__game-time">01:01:21</span>
+            </span>
+          </div>
+
+          <div class="teambox initial" style="--color: var(--red)">
+            <span class="teambox__team-name">Spaghettio Meatballio</span>
+            <span class="teambox__game">
+              <span class="teambox__game-name">Crash 2</span>
+              <span class="teambox__game-time">01:04:32</span>
+            </span>
+          </div>
+
+          <div class="teambox initial" style="--color: var(--orange)">
+            <span class="teambox__team-name">&#127345; Team</span>
+            <span class="teambox__game">
+              <span class="teambox__game-name">Crash 1</span>
+              <span class="teambox__game-time">00:15:06</span>
+            </span>
+          </div>
+
+          <div class="teambox initial" style="--color: var(--green)">
+            <span class="teambox__team-name">A Picture of Snoop Dogg</span>
+            <span class="teambox__game">
+              <span class="teambox__game-name">Spyro 1</span>
+              <span class="teambox__game-time">00:00:32</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="wipe-overlay-leader --1"></div>
+      <div class="wipe-overlay-leader --2"></div>
+      <div class="wipe-overlay">
+        <div class="wipe-overlay__backgrounds">
+          <img class="wipe-overlay__background--old"></img>
+          <img class="wipe-overlay__background--new"></img>
+        </div>
+
+        <div class="wipe-overlay__content">
+          <div class="wipe-overlay__runner"></div>
+          <span class="wipe-overlay__info"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./index.ts"></script>
+</html>

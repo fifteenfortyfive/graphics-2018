@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "noEmitOnError": true,
+    "lib": [
+      "es6",
+      "dom",
+      "dom.iterable"
+    ]
+  },
+  "parcel-plugin-typescript": {
+    "transpileOnly": false
+  }
+}

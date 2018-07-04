@@ -1,0 +1,16 @@
+## Bottom bar ideas
+- game time rankings
+  . Show a "leaderboard" for the finishes of a single game. Maybe trigger after someone finishes their run?
+  . show upcoming runs of the game with estimated start time.
+
+- announcing game finishes
+  . When a runner finishes their game, show an announcement in the bottom bar
+  ? only if they aren't on stream
+
+-
+
+
+## Background animation ideas
+- square grid with travelling lines
+  . darker, glowing squares slowly move along the grid randomly.
+  . new squares spawn by bifricating, slowly fade out over time.

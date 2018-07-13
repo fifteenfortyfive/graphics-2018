@@ -10,10 +10,10 @@ export class Gameplate {
   estimate: string;
   timeline: TimelineMax;
 
-  constructor(container: HTMLElement, game: Game, estimate: string) {
+  constructor(container: HTMLElement) {
     this.container = container;
-    this.game = game;
-    this.estimate = estimate;
+    this.game = null;
+    this.estimate = null;
     this.timeline = new TimelineMax();
   }
 

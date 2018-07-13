@@ -29,7 +29,7 @@ export class WipeTransition {
     // wipe in
     tl.to(".wipe-overlay-leader.--1", 0.4, { height: 900, ease: Power3.easeIn }, 0);
     tl.to(".wipe-overlay-leader.--2", 0.3, { height: 900, ease: Power3.easeIn }, 0.27);
-    tl.to(".wipe-overlay", 0.4, { height: 900, ease: Power3.easeOut }, 0.6);
+    tl.to(".wipe-overlay", 0.4, { height: 900, ease: Power3.easeOut }, 0.55);
     // slide background image
     tl.fromTo(".wipe-overlay__background--old", 5.8, { y: -200 }, { y: 0, ease: Linear.easeInOut }, 0);
     tl.fromTo(".wipe-overlay__background--new", 5.8, { y: -200 }, { y: 0, ease: Linear.easeInOut }, 0);
@@ -42,8 +42,8 @@ export class WipeTransition {
     tl.add(animate.text(".wipe-overlay__runner", this.new_runner.name), 2.1);
     tl.add(animate.text(".wipe-overlay__info", `${this.new_runner.team.name} – ${this.new_game.name}`), 2.1);
     // wipe out
-    tl.to(".wipe-overlay", 0.5, { height: 0, ease: Power3.easeIn }, 4.4);
-    tl.to(".wipe-overlay-leader.--2", 0.4, { height: 0, ease: Power3.easeIn }, 4.8);
-    tl.to(".wipe-overlay-leader.--1", 0.4, { height: 0, ease: Power3.easeIn }, 5.0);
+    tl.to(".wipe-overlay", 0.4, { height: 0, ease: Power3.easeIn }, 4.5);
+    tl.to(".wipe-overlay-leader.--2", 0.3, { height: 0, ease: Power3.easeIn }, 4.8);
+    tl.to(".wipe-overlay-leader.--1", 0.4, { height: 0, ease: Power3.easeOut }, 5.1);
   }
 }

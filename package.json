@@ -9,6 +9,8 @@
     "typescript": "^2.9.2"
   },
   "dependencies": {
-    "gsap": "^2.0.1"
+    "gsap": "^2.0.1",
+    "moment": "^2.22.2",
+    "moment-duration-format": "^2.2.2"
   }
 }

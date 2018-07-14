@@ -3,7 +3,7 @@ import { Nameplate } from "./components/nameplate";
 
 declare var Twitch:any;
 
-const STREAM_ROTATION_CYCLE_TIME = 6 * 10 * 1000;
+const STREAM_ROTATION_CYCLE_TIME = 6 * 60 * 1000;
 
 var base_uri = (window.location.protocol === "https:" ? "wss://" : "ws://") + window.location.host;
 let socket = new WebSocket("wss://fifteenfortyfive.org/stream");

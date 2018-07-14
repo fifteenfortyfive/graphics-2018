@@ -3,14 +3,17 @@ import { Nameplate } from "./components/nameplate";
 
 declare var Twitch:any;
 
-const STREAM_ROTATION_CYCLE_TIME = 6 * 60 * 1000;
+const STREAM_ROTATION_CYCLE_TIME = 6 * 10 * 1000;
 
 var base_uri = (window.location.protocol === "https:" ? "wss://" : "ws://") + window.location.host;
-let socket = new WebSocket("ws://localhost:3000/stream");
-
+let socket = new WebSocket("wss://fifteenfortyfive.org/stream");
 
 function fetch_current_runs() {
   socket.send(`{"request": "all_current_runs"}`);
+}
+
+function fetch_ping() {
+  socket.send(`{"request": "ping"}`);
 }
 
 const no_feature_player_options = {
@@ -145,6 +148,10 @@ function setUpdateTimers() {
   setInterval(function() {
     fetch_current_runs();
   }, STREAM_ROTATION_CYCLE_TIME);
+
+  setInterval(function() {
+    fetch_ping();
+  }, 10000);
 }
 
 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1545 stream graphics</title>
+
+    <link rel="stylesheet" href="./style.no-feature.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+    <script src= "http://player.twitch.tv/js/embed/v1.js"></script>
+  </head>
+
+  <body>
+    <div class="stream-container">
+      <canvas id="grid_bg"></canvas>
+      <svg id="grid_svg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="var(--border-gray)" stroke-width="1" />
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#smallGrid)" />
+      </svg>
+
+
+      <div class="stream-player" id="left-top_player"></div>
+      <div class="stream-player" id="left-bottom_player"></div>
+
+      <div class="middle-bar__brand">
+        The 1545
+      </div>
+
+      <div class="middle-bar">
+
+        <div class="middle-bar__nameplates">
+          <div class="nameplate nameplate" id="left-top_nameplate" style="--color: var(--dark-gray)">
+            <img class="nameplate__avatar">
+            <div class="nameplate-text">
+              <span class="nameplate__name"></span>
+              <div class="nameplate-info">
+                <span class="nameplate-info__cell"><span class="nameplate__team"></span></span>
+                <span class="nameplate-info__cell nameplate__social">
+                  <span class="fab fa-twitch"></span>
+                  <span class="nameplate__twitch__text"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="nameplate nameplate" id="left-bottom_nameplate" style="--color: var(--dark-gray)">
+            <img class="nameplate__avatar">
+            <div class="nameplate-text">
+              <span class="nameplate__name"></span>
+              <div class="nameplate-info">
+                <span class="nameplate-info__cell"><span class="nameplate__team"></span></span>
+                <span class="nameplate-info__cell nameplate__social">
+                  <span class="fab fa-twitch"></span>
+                  <span class="nameplate__twitch__text"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="nameplate nameplate" id="right-top_nameplate" style="--color: var(--dark-gray)">
+            <img class="nameplate__avatar">
+            <div class="nameplate-text">
+              <span class="nameplate__name"></span>
+              <div class="nameplate-info">
+                <span class="nameplate-info__cell"><span class="nameplate__team"></span></span>
+                <span class="nameplate-info__cell nameplate__social">
+                  <span class="fab fa-twitch"></span>
+                  <span class="nameplate__twitch__text"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="nameplate nameplate" id="right-bottom_nameplate" style="--color: var(--dark-gray)">
+            <img class="nameplate__avatar">
+            <div class="nameplate-text">
+              <span class="nameplate__name"></span>
+              <div class="nameplate-info">
+                <span class="nameplate-info__cell"><span class="nameplate__team"></span></span>
+                <span class="nameplate-info__cell nameplate__social">
+                  <span class="fab fa-twitch"></span>
+                  <span class="nameplate__twitch__text"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="stream-player" id="right-top_player"></div>
+      <div class="stream-player" id="right-bottom_player"></div>
+    </div>
+  </body>
+
+
+  <script src="./no_feature.ts"></script>
+</html>

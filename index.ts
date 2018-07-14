@@ -122,7 +122,6 @@ function update_featured_run(run) {
     color: getComputedStyle(document.body).getPropertyValue(`--${run.game_series}`),
   }, run.estimate);
 
-  document.querySelector("#featured_stream").innerHTML = "";
   featured_player.setChannel(run.twitch);
 
   featured_timer.classList.remove("live-timer");
